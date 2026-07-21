@@ -60,7 +60,7 @@ test('get user with inexisting ID ',async({request})=>{
     const Body=await response.json();
     console.log(Body);
 })
-test.only('create a new user without a name ',async ({request})=>{
+test('create a new user without a name ',async ({request})=>{
   const response=await request.post('https://jsonplaceholder.typicode.com/users',{
     data:{
         username:55,

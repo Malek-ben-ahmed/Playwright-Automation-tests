@@ -58,7 +58,7 @@ test('Register while leaving one or more required fields empty',async ({page})=>
     await expect(error_message).toMatch(/First name is required.|Le prénom est obligatoire./);   
         })
 
-test.only('Register with an email already used by another account',async({page})=>{
+test('Register with an email already used by another account',async({page})=>{
     const RegisterPage=new RegisterPage(page);
     await RegisterPage.gotoRegisterPage();
     await RegisterPage.selectfemalesexe();
