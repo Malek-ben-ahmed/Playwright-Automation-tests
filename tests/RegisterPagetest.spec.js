@@ -12,6 +12,13 @@ test('Register with valid data in all required fields',async({page})=>{
     await registerPage.enterPassword('hellotest.');
     await registerPage.enterConfPassword('hellotest.');
     await registerPage.clickRegisterButton();
+    await registerPage.clickRegisterButton();
+    await page.screenshot({
+        path: 'after-register.png',
+        fullPage: true
+    });
+
+    console.log("URL après inscription :", page.url());
     const success_registration=await page.locator('.result').textContent();
     await expect(success_registration).toMatch(/Your registration completed|Votre inscription est terminée/);
 })
@@ -110,6 +117,12 @@ test('Register with special characters in First Name or Last Name',async ({page}
     await registerPage.enterPassword('maila123');
     await registerPage.enterConfPassword('maila123');
     await registerPage.clickRegisterButton();
+    await registerPage.clickRegisterButton();
+    await page.screenshot({
+        path: 'after-register.png',
+        fullPage: true
+    });
+    console.log("URL après inscription :", page.url());
     const success_registration=await page.locator('.result').textContent();
     await expect(success_registration).toMatch(/Your registration completed|Votre inscription est terminée/);
 })
