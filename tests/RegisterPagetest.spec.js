@@ -8,7 +8,7 @@ test('Register with valid data in all required fields',async({page})=>{
     await registerPage.selectfemalesexe();
     await registerPage.enterFirstName('My');
     await registerPage.enterLastName('testing');
-    await registerPage.enterEmail('welcometoMytest@gmail.com')
+    await registerPage.enterEmail('welcomeheretoMytest@gmail.com')
     await registerPage.enterPassword('hellotest.');
     await registerPage.enterConfPassword('hellotest.');
     await registerPage.clickRegisterButton();
