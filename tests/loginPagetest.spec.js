@@ -17,7 +17,7 @@ test('Register with valid data in all required fields',async({page})=>{
 })
 
 test('Register with an invalid email format',async({page})=>{
-    const registerPage=new registerPage(page);
+    const registerPage=new RegisterPage(page);
     await registerPage.gotoregisterPage();
     await registerPage.selectfemalesexe();
     await registerPage.enterFirstName('Jane');
@@ -31,7 +31,7 @@ test('Register with an invalid email format',async({page})=>{
 })
 
 test('Register with a password confirmation different from the password',async({page})=>{
-    const registerPage=new registerPage(page);
+    const registerPage=new RegisterPage(page);
     await registerPage.gotoregisterPage();
     await registerPage.selectmalesexe();
     await registerPage.enterFirstName('Jane');
@@ -45,7 +45,7 @@ test('Register with a password confirmation different from the password',async({
 });
 
 test('Register while leaving one or more required fields empty',async ({page})=>{
-    const registerPage=new registerPage(page);
+    const registerPage=new RegisterPage(page);
     await registerPage.gotoregisterPage();
     await registerPage.selectfemalesexe();
     await registerPage.enterFirstName('');
@@ -59,7 +59,7 @@ test('Register while leaving one or more required fields empty',async ({page})=>
         })
 
 test('Register with an email already used by another account',async({page})=>{
-    const registerPage=new registerPage(page);
+    const registerPage=new RegisterPage(page);
     await registerPage.gotoregisterPage();
     await registerPage.selectfemalesexe();
     await registerPage.enterFirstName('Jane');
@@ -73,7 +73,7 @@ test('Register with an email already used by another account',async({page})=>{
 });
 
 test('Register with a password shorter than 6characters',async ({page})=>{
-    const registerPage=new registerPage(page);
+    const registerPage=new RegisterPage(page);
     await registerPage.gotoregisterPage();
     await registerPage.selectfemalesexe();
     await registerPage.enterFirstName('Jihen');
@@ -87,7 +87,7 @@ test('Register with a password shorter than 6characters',async ({page})=>{
 });
 
 test('Register with only spaces in text fields',async ({page})=>{
-    const registerPage=new registerPage(page);
+    const registerPage=new RegisterPage(page);
     await registerPage.gotoregisterPage();
     await registerPage.selectfemalesexe();
     await registerPage.enterFirstName('     ');
@@ -101,7 +101,7 @@ test('Register with only spaces in text fields',async ({page})=>{
 })
 
 test('Register with special characters in First Name or Last Name',async ({page})=>{
-    const registerPage=new registerPage(page);
+    const registerPage=new RegisterPage(page);
     await registerPage.gotoregisterPage();
     await registerPage.selectfemalesexe();
     await registerPage.enterFirstName('maila//');
