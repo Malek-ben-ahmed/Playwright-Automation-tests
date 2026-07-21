@@ -1,9 +1,9 @@
 import { log } from "node:console";
-import { registerPage } from "../Pages/registerPage";
+import { RegisterPage } from "../Pages/registerPage";
 import { test,expect } from "@playwright/test";
 
 test('Register with valid data in all required fields',async({page})=>{
-    const registerPage=new registerPage(page)
+    const registerPage=new RegisterPage(page)
     await registerPage.gotoregisterPage();
     await registerPage.selectfemalesexe();
     await registerPage.enterFirstName('My');
