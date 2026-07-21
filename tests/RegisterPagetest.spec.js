@@ -19,7 +19,7 @@ test('Register with valid data in all required fields',async({page})=>{
     });
 
     console.log("URL après inscription :", page.url());
-    const success_registration=await page.locator('.result').textContent();
+    const success_registration=await page.locator('.page-body').textContent();
     await expect(success_registration).toMatch(/Your registration completed|Votre inscription est terminée/);
 })
 
@@ -123,6 +123,6 @@ test('Register with special characters in First Name or Last Name',async ({page}
         fullPage: true
     });
     console.log("URL après inscription :", page.url());
-    const success_registration=await page.locator('.result').textContent();
+    const success_registration=await page.locator('.page-body').textContent();
     await expect(success_registration).toMatch(/Your registration completed|Votre inscription est terminée/);
 })
