@@ -27,4 +27,5 @@ pipline{
             bat 'npx playwright show-report'
         }
     }
+    }
 }
