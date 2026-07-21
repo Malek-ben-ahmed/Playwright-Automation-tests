@@ -9,22 +9,22 @@ pipline{
     }
     stage('Install dependencies'){
         steps{
-            sh 'npm install'
+            bat 'npm install'
         }
     }
     stage('Install Browsers'){
         steps{
-            sh 'npx playwright install'
+            bat 'npx playwright install'
         }
     }
     stage('Run tests'){
         steps{
-            sh 'npx playwright test'
+            bat 'npx playwright test'
         }
     }
     stage('Report generation'){
         steps{
-            sh 'npx playwright show-report'
+            bat 'npx playwright show-report'
         }
     }
 }
