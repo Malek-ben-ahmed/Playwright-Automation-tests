@@ -10,7 +10,7 @@ export class RegisterPage{
         await this.page.locator('#gender-female').click() ;
     }
     async selectmalesexe(){
-        await this.page.locator('gender-male').click() ;
+        await this.page.locator('#gender-male').click() ;
     }
     async enterFirstName(firstname){
         await this.page.locator('#FirstName').fill(firstname);
